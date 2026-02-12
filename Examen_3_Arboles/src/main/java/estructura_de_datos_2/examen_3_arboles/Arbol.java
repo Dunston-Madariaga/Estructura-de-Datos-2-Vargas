@@ -160,11 +160,12 @@ public class Arbol {
         if (p == null) {
             return null;
         }
-        p.izq = eliminarHojas(p.izq);
-        p.der = eliminarHojas(p.der);
+
         if (p.izq == null && p.der == null) {
             return null;
         }
+        p.izq = eliminarHojas(p.izq);
+        p.der = eliminarHojas(p.der);
         return p;
     }
 
